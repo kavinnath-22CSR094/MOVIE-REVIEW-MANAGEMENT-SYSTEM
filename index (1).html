@@ -1,0 +1,84 @@
+<html>
+<head>
+    <script src="formJS.js"></script>
+    <link rel="stylesheet" href="formCSS.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <style>
+        
+      </style>
+</head>    
+<body class="container bg-container" >  
+    <form id="myForm" onsubmit="return submitForm(event)" action="/update" method="post"class="mt-3 form-custom">
+        <h1 style="text-align: center;">UPDATE</h1>
+        <div class="row">
+            <label for="name" class="col-4">Name:</label>
+            <div class="col-7">
+            <input type="text" id="name" name="name" placeholder="Enter your name"class="form-control">
+            <span id="nameError" class="error"></span><br>
+        </div>
+        </div>
+    
+        <div class="row">
+            <label for="email" class="col-4">Email:</label>
+            <div class="col-7">    
+            <input type="email" id="email" name="email" placeholder="Enter your email" class="form-control">
+            <span id="emailError" class="error"></span><br>
+        </div>    
+        </div>
+    
+        <div class="row">
+            <label for="password" class="col-4">Password:</label>
+        <div class="col-7">    
+            <input type="password" id="password"  placeholder="Enter your password" class="form-control">
+            <span id="passwordError" class="error"></span><br>
+        </div>     
+        </div>     
+    
+        <div class="row">
+            <label for="confirmPassword" class="col-4">Confirm Password:</label>
+        <div class="col-7">    
+            <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" class="form-control">
+            <span id="confirmPasswordError" class="error"></span><br>
+        </div>     
+        </div> 
+     <div class="row">
+            <label for="age" class="col-4">Age:</label>
+        <div class="col-7">    
+            <input type="number" id="age" placeholder="Enter your age" name="age" minlength="18" maxlength="21"class="form-control">
+            <span id="ageError" class="error"></span><br>
+        </div>     
+        </div>
+    
+         
+    
+        <div class="row">
+            <label class="col-4" for="phone">Phone Number:</label>
+        <div class="col-7">    
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" class="form-control">
+            <span id="phoneError" class="error"></span><br>
+        </div>     
+        </div>
+
+
+        <div class="row">
+            <label for="country" class="col-4">Country:</label>
+        <div class="col-7">    
+            <select id="country" name="country">
+                <option value="">Select</option>
+                <option value="usa">India</option>
+                <option value="uk">Russia</option>
+                <option value="canada">Canada</option>
+            </select> 
+             <span id="countryError" class="error"></span><br>
+        </div>     
+        </div> 
+        <button type="submit" class="btn-custom">UPDATE</button>
+    </form>
+    
+    
+    <a href="/report" style="width: 100%; color:black;">Generate Report</a>
+</body>  
+</html>
